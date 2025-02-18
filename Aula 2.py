@@ -5,10 +5,10 @@ import plotly.graph_objs as go
 
 dados_conceitos = {#dicionario com as informações da caixa dopdown 
                                 #- jason com varios campos
-'java' : {'variaveis':8, 'condicionais':10, 'loops': 4, 'poo': 3, 'funcoes':4 }
-'python' : {'variaveis':9, 'condicionais':7, 'loops': 8, 'poo': 4, 'funcoes':5 }
-'sql' : {'variaveis':7, 'condicionais':10, 'loops': 9, 'poo': 4, 'funcoes':4 }
-'golang' : {'variaveis':10, 'condicionais':5, 'loops': 8, 'poo': 3, 'funcoes':3 }
+'java' : {'variaveis':8, 'condicionais':10, 'loops': 4, 'poo': 3, 'funcoes':4 },
+'python' : {'variaveis':9, 'condicionais':7, 'loops': 8, 'poo': 4, 'funcoes':5 },
+'sql' : {'variaveis':7, 'condicionais':10, 'loops': 9, 'poo': 4, 'funcoes':4 },
+'golang' : {'variaveis':10, 'condicionais':5, 'loops': 8, 'poo': 3, 'funcoes':3 },
 'javascript' : {'variaveis':8, 'condicionais':7, 'loops': 7, 'poo': 3, 'funcoes':8 }
 }
 
@@ -31,10 +31,10 @@ app.layout = html.Div([
          dcc.Dropdown(#menu dropdown
              id="dropdown_linguagens",
              options=[
-                {'label':'Java','valor':'java'}
-                {'label':'Python','valor':'python'}
-                {'label':'SQL','valor':'sql'}
-                {'label':'GoLang','valor':'golang'}
+                {'label':'Java','valor':'java'},
+                {'label':'Python','valor':'python'},
+                {'label':'SQL','valor':'sql'},
+                {'label':'GoLang','valor':'golang'},
                 {'label':'JavaScript','valor':'javascript'}
              ],
              value=['java'],

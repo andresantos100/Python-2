@@ -13,10 +13,10 @@ dados_conceitos = {#dicionario com as informações da caixa dopdown
 }
 
 cores_map = dict(
-    java = 'red',
+    java = 'blue',
     python = 'green',
     sql='yellow',
-    golang='blue',
+    golang='red',
     javascript='pink'
 )
 

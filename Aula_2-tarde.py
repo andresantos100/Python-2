@@ -204,11 +204,30 @@ def filtro_mes(meses_seleciondos):
 @app.callback(
     Output('output_cliente','children'),
     [
-        Input('dropdown_cliente','value')
+        Input('dropdown_cliente','value'),
         Input('radio_categorias','value')
     ]
 )
 
+def atualizar_texto(cliente_selecionado, categoria_selecionada):
+    if cliente_selecionado and categoria_selecionada:
+        return f'TOP5 {categoria_selecionada}|Cliente: {cliente_selecionado}'
+    elif cliente_selecionado:
+        return f'TOP5 Produtos | Cliente :{cliente_selecionado}'
+    elif categoria_selecionada:
+        return f'TOP5 {categoria_selecionada}'
+    return f'TOP5 Categorias'
+
+@app.callback(
+    Output('visual01','figure'),
+    [
+        Input('dropdown_cliente','value'),
+        Input('radio_mes','value'),
+        Input('radio_categorias','value'),
+        Input(ThemeSwitchAIO.ids.switch('theme'),'value')
+    ]
+)
+    
 
 #Subindo servidor 
 if __name__ == 'main':
